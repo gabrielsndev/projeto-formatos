@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Escolha um formato:</h1>
+        <ul>
+            <li>
+                <div class="bola">
+                </div>
+            </li>
+            <li>
+                <div class="quadrado">
+                </div>
+            </li>
+            <li>
+                <div class="triangulo">
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Resultado:</h1>
+        <div class="resultado">
+            <h2 id="?">?</h2>
+        </div>
+    </section>
+
+    <aside>
+        <h2 id="voltar">Voltar</h2>
+    </aside>
+
+    <script>
+        var bola = window.document.querySelector('div.bola')
+        var quadrado = window.document.querySelector('div.quadrado')
+        var triangulo = window.document.querySelector('div.triangulo')
+        var resul = window.document.querySelector('div.resultado')
+        var h2 = window.document.getElementById('?')
+        var voltar = window.document.querySelector('h2#voltar')
+
+
+        bola.addEventListener('click', clicar)
+        quadrado.addEventListener('click', clicarq)
+        triangulo.addEventListener('click', clicart)
+        voltar.addEventListener('click', clicarvoltar)
+        bola.addEventListener('touchstart', tocou)
+        quadrado.addEventListener('touchstart', tocouq)
+        triangulo.addEventListener('touchstart', tocout)
+        voltar.addEventListener('touchstart', tocouvoltar)
+        
+        function clicar(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(4, 148, 148)'
+            resul.style.borderRadius = '50%'
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'
+        }
+
+        function clicarq(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(168, 3, 3)'
+            resul.style.borderRadius = '10%' 
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'
+        }
+        
+        function clicart(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '0px'
+            resul.style.height = '0px'
+            resul.style.borderBottomLeftRadius = '1%'
+            resul.style.borderBottomRightRadius = '1%'
+            resul.style.borderLeft = '90px solid transparent'
+            resul.style.borderRight = '90px solid transparent'
+            resul.style.borderBottom = '100px solid rgb(4, 110, 4)'
+            resul.style.boxShadow = '0px 0px 0px transparent'
+            resul.style.backgroundColor = 'transparent'
+        }
+
+        function clicarvoltar(){
+            resul.style.fontSize = '1em'
+            resul.style.borderRadius = '10%'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(255, 255, 255)'
+            resul.style.color = 'rgb(255, 20, 147)'
+            resul.style.boxShadow = '5px 5px 5px rgba(0, 0, 0, 0.514)'
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'   
+        }
+
+        function tocou(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(4, 148, 148)'
+            resul.style.borderRadius = '50%'
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'
+        }   
+
+        function tocouq(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(168, 3, 3)'
+            resul.style.borderRadius = '10%' 
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'
+        }
+        
+        function tocout(){
+            resul.style.fontSize = '0em'
+            resul.style.transition = '0.5s'
+            resul.style.width = '0px'
+            resul.style.height = '0px'
+            resul.style.borderBottomLeftRadius = '1%'
+            resul.style.borderBottomRightRadius = '1%'
+            resul.style.borderLeft = '90px solid transparent'
+            resul.style.borderRight = '90px solid transparent'
+            resul.style.borderBottom = '100px solid rgb(4, 110, 4)'
+            resul.style.boxShadow = '0px 0px 0px transparent'
+            resul.style.backgroundColor = 'transparent'
+        }
+
+        function tocouvoltar(){
+            resul.style.fontSize = '1em'
+            resul.style.borderRadius = '10%'
+            resul.style.width = '200px'
+            resul.style.height = '200px'
+            resul.style.backgroundColor = 'rgb(255, 255, 255)'
+            resul.style.color = 'rgb(255, 20, 147)'
+            resul.style.boxShadow = '5px 5px 5px rgba(0, 0, 0, 0.514)'
+            resul.style.borderLeft = '0px solid transparent'
+            resul.style.borderRight = '0px solid transparent'
+            resul.style.borderBottom = '0px solid transparent'   
+        }
+
+        
+    </script>
+</body>
+</html>
